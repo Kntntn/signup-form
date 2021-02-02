@@ -1,0 +1,175 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap");
+
+* {
+  margin: 0;
+  box-sizing: border-box;
+}
+
+html,
+body {
+  font-family: "Poppins", sans-serif;
+}
+
+body {
+  padding: 1rem;
+  background-image: url(./images/bg-intro-mobile.png);
+  background-color: hsl(0, 100%, 74%);
+}
+
+main {
+  display: flex;
+  flex-direction: column;
+}
+
+/* Text */
+
+.text {
+  text-align: center;
+  color: white;
+  margin: 4rem 0;
+}
+
+.title {
+  margin-bottom: 1rem;
+}
+
+/* Form */
+
+.trial {
+  background-color: hsl(248, 32%, 49%);
+  color: white;
+  font-size: 0.9rem;
+  font-weight: 100;
+  text-align: center;
+  padding: 1rem 4rem;
+  border-radius: 0.5rem;
+  box-shadow: 0 6px 0 rgba(0, 0, 0, 0.2);
+  margin-bottom: 2rem;
+}
+
+.trial span {
+  font-weight: 600;
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+  background-color: white;
+  padding: 1rem;
+  border-radius: 0.5rem;
+  box-shadow: 0 6px 0 rgba(0, 0, 0, 0.2);
+}
+
+form input {
+  font-family: "Poppins", sans-serif;
+  border: 1px solid hsl(246, 25%, 77%);
+  border-radius: 0.5rem;
+  padding: 1rem;
+  font-size: 1rem;
+  font-weight: 600;
+  color: hsl(249, 10%, 26%);
+  margin-bottom: 1rem;
+}
+
+#submit {
+  text-transform: uppercase;
+  border: none;
+  background-color: hsl(154, 59%, 51%);
+  color: white;
+  font-weight: 300;
+  box-shadow: 0 6px 0 rgb(52, 184, 126);
+}
+
+#submit:hover {
+  transform: translateY(2px);
+  box-shadow: 0 4px 0 rgb(52, 184, 126);
+}
+
+form p {
+  text-align: center;
+  font-size: 0.7rem;
+  font-weight: 500;
+  margin: 0 1.5rem;
+  color: hsl(246, 25%, 77%);
+}
+
+form a {
+  text-decoration: none;
+  color: hsl(0, 100%, 74%);
+  font-weight: 700;
+}
+
+/* Footer */
+
+footer {
+  margin-top: 1rem;
+}
+
+.attribution {
+  color: white;
+  font-size: 11px;
+  text-align: center;
+}
+
+.attribution a {
+  text-decoration: none;
+  font-weight: 700;
+  color: hsl(228, 45%, 44%);
+}
+
+/* Media Queries */
+
+@media only screen and (min-width: 1090px) {
+  body {
+    padding: 0;
+    margin: 0;
+    background-image: url(images/bg-intro-desktop.png);
+  }
+
+  main {
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    margin: 0 auto;
+  }
+
+  .text,
+  .form {
+    flex: 1;
+    max-width: 35rem;
+  }
+
+  .text {
+    margin: 0 4vh;
+    text-align: start;
+  }
+
+  .title {
+    font-size: 3.5rem;
+    line-height: 4rem;
+    margin-bottom: 2rem;
+  }
+
+  .form {
+    margin: 0 4vh;
+  }
+
+  form {
+    padding: 3rem;
+  }
+
+  footer {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    margin-bottom: 1rem;
+  }
+}
+
+@media only screen and (min-width: 490px) {
+  main {
+    max-width: 70%;
+    margin: auto;
+  }
+}
