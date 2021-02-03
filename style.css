@@ -69,6 +69,26 @@ form input {
   font-weight: 600;
   color: hsl(249, 10%, 26%);
   margin-bottom: 1rem;
+  width: 100%;
+}
+
+.field {
+    display: inline-block;
+    position: relative;
+}
+
+.field img {
+    position: absolute;
+    right: 5%;
+    top: 25%;
+    height: 25%;
+    display: none;
+}
+
+small {
+    font-size: .8rem;
+    text-align: end;
+    color: red;
 }
 
 #submit {
@@ -78,11 +98,16 @@ form input {
   color: white;
   font-weight: 300;
   box-shadow: 0 6px 0 rgb(52, 184, 126);
+  cursor: pointer;
+}
+
+#submit:active {
+  transform: translateY(2px);
+  box-shadow: 0 4px 0 rgb(52, 184, 126);
 }
 
 #submit:hover {
-  transform: translateY(2px);
-  box-shadow: 0 4px 0 rgb(52, 184, 126);
+  background-color: hsl(154, 63%, 53%);
 }
 
 form p {
@@ -167,7 +192,7 @@ footer {
   }
 }
 
-@media only screen and (min-width: 490px) {
+@media only screen and (min-width: 490px) and (max-width: 1089px) {
   main {
     max-width: 70%;
     margin: auto;

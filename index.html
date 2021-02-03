@@ -6,23 +6,42 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
   <link rel="stylesheet" href="style.css">
+  <script language="javascript" type="text/javascript" src="script.js"></script>
   <title>Frontend Mentor | Intro component with sign up form</title>
 </head>
 
 <body>
   <main>
+
     <section class="text">
       <h1 class="title">Learn to code by<br>watching others</h1>
       <p class="info">See how experienced developers solve problems in real-time. Watching scripted tutorials is great,
         but understanding how developers think is invaluable.</p>
     </section>
+
     <section class="form">
       <p class="trial"><span>Try it free 7 days</span> then $20/mo. thereafter</p>
-      <form action="submit">
-        <input type="text" name="firstname" id="fname" placeholder="First Name">
-        <input type="text" name="lname" id="lname" placeholder="Last Name">
-        <input type="text" name="mail" id="mail" placeholder="Email Address">
-        <input type="text" name="password" id="password" placeholder="Password">
+      <form name="form" action="/action_page.php" onsubmit="return validateForm()" method="post">
+        <div class="field">
+          <input type="text" name="firstname" id="fname" placeholder="First Name">
+          <img src="images/icon-error.svg" alt="">
+        </div>
+        <small id="fnameError"></small>
+        <div class="field">
+          <input type="text" name="lname" id="lname" placeholder="Last Name">
+          <img src="images/icon-error.svg" alt="">
+        </div>
+        <small id="lnameError"></small>
+        <div class="field">
+          <input type="email" name="email" id="email" placeholder="Email Address">
+          <img src="images/icon-error.svg" alt="">
+        </div>
+        <small id="emailError"></small>
+        <div class="field">
+          <input type="password" name="password" id="password" placeholder="Password">
+          <img src="images/icon-error.svg" alt="">
+        </div>
+        <small id="passwordError"></small>
         <input type="submit" value="Claim your free trial" id="submit">
         <p>By click the button you are agreeing to our <a href="#">Terms and Services</a></p>
       </form>
@@ -35,6 +54,7 @@
       Coded by <a href="#">Kntntn</a>.
     </p>
   </footer>
+
 </body>
 
 </html>
